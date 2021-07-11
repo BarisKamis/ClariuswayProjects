@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %} Ana Sayfa {% endblock %}
+
+{% block main %}
+<div class="jumbotron">
+    <div class=container>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+            {% for contact in contacts %}
+                <tr>
+                    <td>{{ contact.name }}</td>
+                    <td>{{ contact.email }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>   
+</div>    
+{% endblock %}
